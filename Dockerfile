@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
-RUN dpkg --add-architecture i386 &&\
+RUN export DEBIAN_FRONTEND=noninteractive &&\
+    export TZ=Etc/UTC &&\
+    dpkg --add-architecture i386 &&\
     apt update &&\
     apt -y install build-essential python git wget curl zip unzip gcc g++ gcc-multilib g++-multilib pkg-config ninja-build &&\
     apt clean
