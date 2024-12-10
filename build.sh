@@ -25,10 +25,9 @@ function build_image()
     docker commit -m "${NAME} image built on ubuntu${UBUNTU_VER} with ${VERSION} and clang ${CLANG_VER}" -a "Nemirtingas" "${container_name}" nemirtingas/${NAME}:${VERSION} &&
     docker push nemirtingas/${NAME}:${VERSION} &&
     docker rm "${container_name}"
-
-    cleanup
 }
 
 trap cleanup INT
 # Start building your docker image: build_image  "ubuntu version" "clang/llvm version"
 build_image linux_vcpkg "22.04" "17"
+build_image linux_vcpkg "22.04" "18"
