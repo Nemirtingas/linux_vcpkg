@@ -29,5 +29,6 @@ function build_image()
 
 trap cleanup INT
 # Start building your docker image: build_image  "ubuntu version" "clang/llvm version"
-build_image linux_vcpkg "22.04" "17"
-build_image linux_vcpkg "22.04" "18"
+#build_image linux_vcpkg "22.04" "17"
+#build_image linux_vcpkg "22.04" "18"
+build_image linux_vcpkg "22.04" "20"
