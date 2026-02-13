@@ -32,4 +32,5 @@ trap cleanup INT
 #build_image linux_vcpkg "22.04" "17"
 #build_image linux_vcpkg "22.04" "18"
 #build_image linux_vcpkg "22.04" "20"
-build_image linux_vcpkg "22.04" "22"
+#build_image linux_vcpkg "22.04" "22"
+build_image linux_vcpkg "24.04" "22"
